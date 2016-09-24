@@ -1,0 +1,76 @@
+* {
+	color:yellow;
+}
+h4{
+	text-align:center;
+}
+h1{
+	text-align:center;
+}
+#all{
+	width :1200px;
+	margin:auto;
+	padding: auto;
+	margin-top:-20px;
+	background-image: url(http://cdn.wallpapersafari.com/21/98/Ign4w1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-bottom:-10px;
+}
+#titlu{
+	margin-top:;
+	height:100px;
+}
+#game{
+	border:1px solid black;
+	border-radius: 10px;
+	margin:auto;
+	background-color:ivory;
+	height:480px;
+	width:500px;
+}
+#credits{
+	margin:-20px;
+	padding:-20px;
+	font-family:Edwardian Script ITC;
+	font-size:26px;
+}
+#game{
+	padding:5px;
+	text-align:center;
+}
+#control div{
+	height:40px;
+}
+#animation {
+	margin-top: 26px;
+}
+#control div div{
+	font-size:20px;
+	font-weight: bold;
+	color:black;
+	border-radius:200px;
+	height:23px;
+	background-color:grey;
+	border:2px;
+	display:inline-block;
+	padding:5px;	
+}
+#control div div:hover {
+	background-color:white;
+}
+#score{
+	margin-top:0px;
+}
+#scor{
+	padding:3px;
+	height:20px;
+	background-color:grey;
+	
+}
+div{
+	-webkit-user-select: none;
+}
+h4{
+	color:purple;
+}

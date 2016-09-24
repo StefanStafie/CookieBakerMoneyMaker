@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<script type="text/javascript" src="jquery"></script>
+	</head>
+	<body>
+	<div id="all">
+		<div id="titlu">
+			<h1>Welcome to YOUR factory</h1>
+			<h1>Start baking some cookies</h1>
+		</div>
+		<div id="game">
+			<div id="control">
+				<div id="c1">
+					<div id="bake">Bake</div>
+					<div id="click">Baking oven</div>
+					<div id="1">Grand-Ma</div>
+				</div>
+				<div id="c2">
+					<div id="5">Girl-Scouts</div>
+					<div id="25">Factory</div>
+					<div id="100">Over-sea Transports</div>
+				</div>
+				
+			</div>
+			<div id="scor">
+				<p id="score">Score: 0<p> 
+			</div>
+			<div id="animation">
+				<iframe width="500" height="315" src="https://www.youtube.com/embed/nTxy31a8yuA" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<script>
+			var x=1;	
+			var score=0;
+			var total=0;
+			var i=0;
+			$(function () {
+    			$("#click").click(function () {
+    				if (score>10)
+    				{
+    					score=score-10;
+    					x++;
+    				}
+    				document.getElementById("score").innerHTML = "You sold "+total+ " cookies and you currently have " +score+ " cookies";
+    			});
+    		});
+
+			$(function () {
+    			$("#bake").click(function () {
+    				score= score + x;
+    				total= total + x;
+    				document.getElementById("score").innerHTML = "You sold "+total+ " cookies and you currently have " +score+ " cookies";
+    			});
+    		});
+
+
+			function loop1 () {         					 	
+   					setTimeout(function () { 
+   						document.getElementById("score").innerHTML = "You sold "+total+ " cookies and you currently have " +score+ " cookies"  							
+     					score++;
+     					total++;
+     					i--;                     							//  increment the counter
+    					if (i > 0) {						            	//  if the counter < 10, call the loop function
+        					loop1();           						   	 	//  ..  again which will trigger another 
+      					}     
+      					           										//  ..  setTimeout()
+   					}, 300);
+				}
+
+			function loop5 () {         					 	
+   					setTimeout(function () {   							
+     					score=score+5;
+     					document.getElementById("score").innerHTML = "You sold "+total+ " cookies and you currently have " +score+ " cookies"
+     					total=total+5;
+     					i--;                     							//  increment the counter
+    					if (i > 0) {						            	//  if the counter < 10, call the loop function
+        					loop5();           						   	 	//  ..  again which will trigger another 
+      					}     
+      					           										//  ..  setTimeout()
+   					}, 300);
+				}	
+			function loop25 () {         					 	
+   					setTimeout(function () { 
+   						document.getElementById("score").innerHTML = "You sold "+total+ " cookies and you currently have " +score+ " cookies"  							
+     					score=score+25;
+     					total=total+25;
+     					i--;                     							//  increment the counter
+    					if (i > 0) {						            	//  if the counter < 10, call the loop function
+        					loop25();           						   	 	//  ..  again which will trigger another 
+      					}     
+      					           										//  ..  setTimeout()
+   					}, 300);
+				}
+				
+			function loop100 () {         					 	
+   					setTimeout(function () {   	
+   						document.getElementById("score").innerHTML = "You sold "+total+ " cookies and you currently have " +score+ " cookies"						
+     					score=score+100;
+     					total=total+100;
+     					i--;                     							//  increment the counter
+    					if (i > 0) {						            	//  if the counter < 10, call the loop function
+        					loop100();           						   	 	//  ..  again which will trigger another 
+      					}     
+      					           										//  ..  setTimeout()
+   					}, 300);
+				}	
+
+
+			
+    		$(function () {
+    			$("#1").click(function () {
+    				if(score > 50)
+    				{	score=score-50;
+    					i=1500;
+    					loop1 ();
+    				}
+
+    			});
+    		});
+
+    		$(function () {
+    			$("#5").click(function () {
+    				if(score > 500)
+    				{	score=score-500;
+    					i=1500;
+    					loop5 ();
+    				}
+    			});
+    		});
+
+    		$(function () {
+    			$("#25").click(function () {
+    				if(score > 1000)
+    				{	score=score-1000;
+    					i=1500;
+    					loop25 ();
+    				}
+    			});
+    		});
+
+    		$(function () {
+    			$("#100").click(function () {
+    				if(score > 10000)
+    				{	score=score-10000;
+    					i=1500;
+    					loop100 ();
+    				}
+    			});
+    		});
+
+
+		</script>
+		<div id="credits">
+			<h4>Made by 3Pitici corporation. Absolutely no rights reserved</h4>
+		</div>
+	</div>	
+	</body>
+</html>
